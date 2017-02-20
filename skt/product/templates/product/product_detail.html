@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}" role="alert">{{message}}</div>
+        {% endfor %}
+    {% endif %}
+    <div class="media">
+        <div class="media-body">
+            <h3 class="mt-0">{{product.name}} <span class="label label-success">{{product.price }} ₴</span></h3>
+            <p>{{product.description}}</p>
+        </div>
+    </div>
+    <hr>
+    <span class="badge badge-default">Likes - {{product.likes}}</span>
+<hr>
+    <form action="{% url 'product_create_like_view' product.slug %}" method="post">
+        {% csrf_token %}
+        <input type="text" style="display:none" name="product_id" value="{{ product.id }}">
+        <button class="btn btn-block btn-primary" type="submit"><i class="fa fa-thumbs-up">Like product</i> </button>
+    </form>
+
+    {% if product.last_comments %}
+        <h4>Comments</h4>
+        <ul>
+            {% for comment in product.last_comments  %}
+                <li>{{ comment }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <h4> Post a comment</h4>
+    <form action="{% url 'product_create_comment_view' product.slug %}" method="POST">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="to_product_id">Post a comment</label>
+            <input type="text" style="display:none" name="to_product_id" value="{{ product.id }}">
+            {{ form.comment_text }}
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <hr>
+    <a type="submit" class="btn btn-info" href="{% url 'product_list' %}">To product list</a>
+
+{% endblock %}

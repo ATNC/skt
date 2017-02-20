@@ -1,0 +1,75 @@
+[
+  {
+    "model": "product.product",
+    "pk": 1,
+    "fields": {
+      "name": "Product name 1",
+      "slug": "product1",
+      "description": "Product description 1",
+      "price": 10.10,
+      "created_at": "2017-01-01 12:12:12",
+      "modified_at": "2017-01-01 12:12:12"
+    }
+
+  },
+  {
+    "model": "product.product",
+    "pk": 2,
+    "fields": {
+      "name": "Product name 2",
+      "slug": "product2",
+      "description": "Product description 2",
+      "price": 10.12,
+      "created_at": "2017-01-02 12:12:12",
+      "modified_at": "2017-01-02 12:12:12"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 3,
+    "fields": {
+      "name": "Product name 3",
+      "slug": "product3",
+      "description": "Product description 3",
+      "price": 10.13,
+      "created_at": "2017-01-03 13:13:13",
+      "modified_at": "2017-01-03 13:13:13"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 4,
+    "fields": {
+      "name": "Product name 4",
+      "slug": "product4",
+      "description": "Product description 4",
+      "price": 10.14,
+      "created_at": "2017-01-04 14:14:14",
+      "modified_at": "2017-01-04 14:14:14"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 5,
+    "fields": {
+      "name": "Product name 5",
+      "slug": "product5",
+      "description": "Product description 5",
+      "price": 10.15,
+      "created_at": "2017-01-02 12:12:12",
+      "modified_at": "2017-01-02 12:12:12"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 6,
+    "fields": {
+      "name": "Product name 6",
+      "slug": "product6",
+      "description": "Product description 6",
+      "price": 10.16,
+      "created_at": "2017-01-02 12:12:12",
+      "modified_at": "2017-01-02 12:12:12"
+    }
+  }
+]
